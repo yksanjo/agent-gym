@@ -11,7 +11,7 @@ API_URL="https://api.github.com/repos/yksanjo/agent-gym"
 
 # Check if repository exists
 echo "📦 Checking repository existence..."
-if curl -s -I "$REPO_URL" | grep -q "200 OK"; then
+if curl -s -f "$API_URL" > /dev/null 2>&1; then
     echo "✅ Repository exists: $REPO_URL"
 else
     echo "❌ Repository not found: $REPO_URL"
@@ -44,13 +44,11 @@ echo "$COMMITS" | jq -r '.[] | "\(.sha[0:7]) - \(.commit.message | split("\n")[0
 
 # Check files in repository
 echo ""
-echo "📁 Key Files (via API):"
-echo "-----------------------"
-# Note: GitHub API doesn't easily list all files without cloning
-# We'll check for key files instead
+echo "📁 Key Files (checking locally after clone):"
+echo "-------------------------------------------"
 KEY_FILES=("README.md" "LICENSE" "CONTRIBUTING.md" "CHANGELOG.md" "QUICKSTART.md")
 for file in "${KEY_FILES[@]}"; do
-    if curl -s -I "$REPO_URL/blob/main/$file" | grep -q "200 OK"; then
+    if [ -f "$TEMP_DIR/$file" ]; then
         echo "✅ $file"
     else
         echo "❌ $file (not found)"
