@@ -1,5 +1,11 @@
 # Agent Gym: Training Environments for AI Agents
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/yksanjo/agent-gym)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104%2B-green)](https://fastapi.tiangolo.com)
+[![Next.js](https://img.shields.io/badge/Next.js-14.0%2B-black)](https://nextjs.org)
+
 ## The Problem: Agents Don't Get Better From Experience
 
 Current AI agents operate in isolation without learning from their successes and failures. They lack:
@@ -154,7 +160,7 @@ Just as music producers iterate on tracks, refine mixes, and A/B test different 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agent-gym.git
+git clone https://github.com/yksanjo/agent-gym.git
 cd agent-gym
 
 # Install backend dependencies
@@ -203,8 +209,32 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for deta
 ## License
 This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
+## GitHub Repository
+
+The complete source code is available on GitHub: [https://github.com/yksanjo/agent-gym](https://github.com/yksanjo/agent-gym)
+
+### Repository Structure
+```
+agent-gym/
+├── README.md                    # Project overview
+├── PROJECT_PLAN.md              # Detailed implementation plan
+├── BUSINESS_PLAN.md             # Business strategy
+├── IMPLEMENTATION_GUIDE.md      # Development guide
+├── PROJECT_SUMMARY.md           # Project summary
+├── setup.sh                     # Setup script
+├── docker-compose.yml           # Docker configuration
+├── backend/                     # FastAPI backend
+├── frontend/                    # Next.js frontend
+├── examples/                    # Integration examples
+└── docs/                        # Documentation
+```
+
+### Contributing
+We welcome contributions! Please see the repository for contribution guidelines.
+
 ## Contact
-- Website: [agentgym.ai](https://agentgym.ai)
+- GitHub: [https://github.com/yksanjo/agent-gym](https://github.com/yksanjo/agent-gym)
+- Website: [agentgym.ai](https://agentgym.ai) (coming soon)
 - Email: hello@agentgym.ai
 - Twitter: [@agentgym](https://twitter.com/agentgym)
 
